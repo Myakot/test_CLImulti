@@ -69,9 +69,6 @@ def fill_employees():
             employees.append(generate_random_employee(gender='Female'))
             female_count += 1
 
-    for _ in range(100):
-        employees.append(generate_random_employee(gender='Male', last_name_start='F'))
-
     Employee.bulk_insert(employees)
     print("Employees added successfully.")
 
