@@ -5,11 +5,6 @@ import random
 import time
 
 
-def create_table():
-    initialize_db()
-    print("Table created successfully.")
-
-
 def add_employee(full_name, birth_date, gender):
     emp = Employee(full_name, birth_date, gender)
     emp.save_to_db()
@@ -89,7 +84,7 @@ def query_employees():
 if __name__ == '__main__':
     mode = int(sys.argv[1])
     if mode == 1:
-        create_table()
+        initialize_db()
     elif mode == 2:
         full_name = sys.argv[2]
         birth_date = sys.argv[3]
